@@ -18,6 +18,10 @@ This repository serves as a production-grade portfolio demonstrating enterprise-
      - Terminal Commands
      - Verification / Acceptance Criteria
    - Await explicit user sign-off before proceeding.
+5. **Phase-Gated Git Commits**:
+   - The repository uses Git for version control.
+   - At the completion of each phase (or major evaluation batch milestone), the agent must stage all deliverables and commit them with semantic, descriptive messages (e.g., `feat(phase-5): complete batch 5.3 logic evaluations`).
+   - Before any commit, ensure `.env` and sensitive artifacts remain strictly excluded by `.gitignore`.
 
 ## 3. Project Governance & Tracking
 - **Execution Plan**: `docs/plan.md` — The master 7-phase implementation plan. All work must follow the phase sequence and acceptance criteria defined in this document. Before starting any phase, review its section in `plan.md`.
@@ -28,6 +32,7 @@ This repository serves as a production-grade portfolio demonstrating enterprise-
 1. Read the phase section in `docs/plan.md` to understand deliverables and acceptance criteria.
 2. Check `docs/status.md` for current progress and any blockers.
 3. Upon completing each task, update `docs/status.md` with the completion date and notes.
+4. Upon completing each phase or major batch milestone, run `git add .` and commit the changes with a clear semantic message.
 
 ## 4. Architecture & File Layout
 ```text
