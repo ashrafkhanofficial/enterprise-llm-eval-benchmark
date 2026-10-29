@@ -15,6 +15,7 @@ htmlcov/
 build/
 dist/
 *.egg-info/
+data/dry_run_responses.json
 
 # Environment Variables & Secrets
 .env

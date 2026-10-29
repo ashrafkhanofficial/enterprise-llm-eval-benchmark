@@ -598,9 +598,14 @@ def main():
 
     args = parser.parse_args()
 
+    # In dry-run mode, safeguard production raw_responses.json unless explicitly directed
+    target_output = args.output
+    if args.dry_run and args.output == DEFAULT_OUTPUT:
+        target_output = DEFAULT_OUTPUT.parent / "dry_run_responses.json"
+
     run_benchmark(
         test_suite_path=args.test_suite,
-        output_path=args.output,
+        output_path=target_output,
         prompt_id_filter=args.prompt_id,
         category_filter=args.category,
         dry_run=args.dry_run,

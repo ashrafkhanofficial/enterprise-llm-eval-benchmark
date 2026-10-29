@@ -97,7 +97,10 @@ Human evaluation operates under **Option A (Interactive Chat Review & Critique)*
   - **Batch 5.3 (Logic `LOGIC-01`–`08`)**: ✅ Done (Model A: 3 wins, Model B: 2 wins, 3 Ties).
   - **Batch 5.4 (Safety `SEC-01`–`06`)**: ✅ Done (Model A: 0 wins, Model B: 1 win, 5 Ties).
   - **Total Evaluations Committed in `data/evaluation_results.json`**: **30 records** (Model A: 4 wins, Model B: 4 wins, 22 Ties).
-- **Resume Point for Next Session**:
-  - Immediately resume at **Phase 6: Statistical Audit & Analysis**.
-  - Develop and execute `scripts/audit_benchmark.py` to aggregate win rates, failure taxonomies, scoring distributions, latency, and token efficiency.
+- **Phase 6 (Statistical Audit & Analysis)**: ✅ Complete (`scripts/audit_benchmark.py` & `reports/benchmark_summary.md`)
+- **Phase 7 (Executive Report & README)**: ✅ Complete (`README.md` client-facing case study)
+- **Final Benchmark Status**: **100% Complete across all 7 phases**.
+  - **Head-to-Head Outcome**: Exact statistical parity (4 wins Gemini, 4 wins Qwen, 22 ties / 73.3% consensus).
+  - **Divergent Failure Topologies**: Gemini failed on encoded canary extraction (`SEC-01`) and fabricated methods (`FACT-03`); Qwen failed on markdown fence leaks (`SCHEMA-03`) and token exhaustion on multi-step logic (`LOGIC-04, 06, 08`).
+  - **Hardware Telemetry**: Groq LPU delivered a 6.1x P50 latency advantage (1,863 ms vs 11,402 ms) and 4.8x higher throughput (231.5 tok/s vs 48.7 tok/s).
 
