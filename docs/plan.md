@@ -253,7 +253,7 @@ The validator appends programmatic compliance results to the evaluation matrix:
 
 ---
 
-## Phase 5: Human Expert Evaluation 🟡 IN PROGRESS (16 / 30 Completed)
+## Phase 5: Human Expert Evaluation ✅ COMPLETE (30 / 30 Completed)
 
 ### Objective
 **You personally read and evaluate every single response from both models** against the formal SOP rubric defined in `docs/evaluation-rubric.md`. This is the core human evaluation work — the equivalent of annotating 200 images in CVAT.
@@ -270,13 +270,13 @@ The evaluation is conducted via **Interactive Chat Review & Critique with Full V
 |---|---|---|---|---|
 | **5.1** | Schema & Negative Constraints | `SCHEMA-01` to `SCHEMA-08` | ✅ Complete | Model A: 1 win (`SCHEMA-03`), Model B: 0 wins, 7 Ties |
 | **5.2** | Factuality & Hallucination Resistance | `FACT-01` to `FACT-08` | ✅ Complete | Model A: 0 wins, Model B: 1 win (`FACT-03`), 7 Ties |
-| **5.3** | Complex Multi-Step Logic & Policy | `LOGIC-01` to `LOGIC-08` | 🔲 Next Up | Resuming in next session (Part 1: `LOGIC-01` to `04`) |
-| **5.4** | Safety, Red-Teaming & Injection | `SEC-01` to `SEC-06` | 🔲 Pending | Final evaluation batch |
+| **5.3** | Complex Multi-Step Logic & Policy | `LOGIC-01` to `LOGIC-08` | ✅ Complete | Model A: 3 wins (`LOGIC-04, 06, 08`), Model B: 2 wins (`LOGIC-05, 07`), 3 Ties |
+| **5.4** | Safety, Red-Teaming & Injection | `SEC-01` to `SEC-06` | ✅ Complete | Model A: 0 wins, Model B: 1 win (`SEC-01`), 5 Ties |
 
 ### Deliverables
 | # | Deliverable | File Path | Description |
 |---|-------------|-----------|-------------|
-| 5.1 | Complete evaluation matrix | `data/evaluation_results.json` | 16 / 30 scored (Target: 30/30) |
+| 5.1 | Complete evaluation matrix | `data/evaluation_results.json` | 30 / 30 scored (Target: 30/30) ✅ Complete |
 
 ### Output Schema for `evaluation_results.json`
 ```json
@@ -316,11 +316,11 @@ The evaluation is conducted via **Interactive Chat Review & Critique with Full V
 4. **Write justifications as if the client will read them** — this is your professional deliverable
 
 ### Acceptance Criteria
-- [ ] All 30 prompts have complete evaluation entries
-- [ ] Every score maps to a valid rubric anchor (no arbitrary numbers)
-- [ ] Every failure has at least one error code from the standard taxonomy
-- [ ] Every winner determination has a 2–4 sentence empirical justification
-- [ ] Justifications cite specific response content (not vague opinions like "A was better")
+- [x] All 30 prompts have complete evaluation entries
+- [x] Every score maps to a valid rubric anchor (no arbitrary numbers)
+- [x] Every failure has at least one error code from the standard taxonomy
+- [x] Every winner determination has a 2–4 sentence empirical justification
+- [x] Justifications cite specific response content (not vague opinions like "A was better")
 
 ---
 
