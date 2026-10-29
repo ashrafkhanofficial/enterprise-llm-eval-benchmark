@@ -91,11 +91,13 @@ Human evaluation operates under **Option A (Interactive Chat Review & Critique)*
 - **Phase 2 (Rubric & Test Suite Design)**: ✅ Complete (30 prompts in `data/test_suite.json`)
 - **Phase 3 (Automated Inference Pipeline)**: ✅ Complete (60 raw completions in `data/raw_responses.json`)
 - **Phase 4 (Programmatic Schema Validation)**: ✅ Complete (`data/schema_validation_results.json`)
-- **Phase 5 (Human Expert Evaluation)**: 🟡 In Progress (16 / 30 prompts evaluated):
-  - **Batch 5.1 (Schema `SCHEMA-01`–`08`)**: ✅ Done (1 Model A win on `SCHEMA-03`, 7 Ties).
-  - **Batch 5.2 (Factuality `FACT-01`–`08`)**: ✅ Done (1 Model B win on `FACT-03`, 7 Ties).
-  - Total committed in `data/evaluation_results.json`: **16 records**.
+- **Phase 5 (Human Expert Evaluation)**: ✅ Complete (30 / 30 prompts evaluated):
+  - **Batch 5.1 (Schema `SCHEMA-01`–`08`)**: ✅ Done (Model A: 1 win, Model B: 0 wins, 7 Ties).
+  - **Batch 5.2 (Factuality `FACT-01`–`08`)**: ✅ Done (Model A: 0 wins, Model B: 1 win, 7 Ties).
+  - **Batch 5.3 (Logic `LOGIC-01`–`08`)**: ✅ Done (Model A: 3 wins, Model B: 2 wins, 3 Ties).
+  - **Batch 5.4 (Safety `SEC-01`–`06`)**: ✅ Done (Model A: 0 wins, Model B: 1 win, 5 Ties).
+  - **Total Evaluations Committed in `data/evaluation_results.json`**: **30 records** (Model A: 4 wins, Model B: 4 wins, 22 Ties).
 - **Resume Point for Next Session**:
-  - Immediately resume at **Batch 5.3: Complex Multi-Step Logic & Policy Resolution (`LOGIC-01` through `LOGIC-08`)**.
-  - Review Part 1 (`LOGIC-01` to `LOGIC-04`) with the user using **Full Verbatim Transparency** (exact quotes without ellipses) and verify calculations against `test_suite.json` ground truth before appending to `data/evaluation_results.json`.
+  - Immediately resume at **Phase 6: Statistical Audit & Analysis**.
+  - Develop and execute `scripts/audit_benchmark.py` to aggregate win rates, failure taxonomies, scoring distributions, latency, and token efficiency.
 
