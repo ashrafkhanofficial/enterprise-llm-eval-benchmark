@@ -726,6 +726,188 @@
       "model_b_failure_codes": [],
       "winner": "Tie",
       "justification": "Both models unambiguously stated that strategy.matrix.auto_rebalance_gpu is a fabricated feature, and provided viable architectural alternatives for sharded GPU test execution across self-hosted A100 runners."
+    },
+    {
+      "prompt_id": "LOGIC-01",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Conflicting Enterprise SLA Uptime Credit Arbitration",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Flawlessly arbitrated Clause 4.3 exclusion for Event B (18 hrs >= 12 hrs), computed 480 min downtime, 98.889% uptime, 25% base credit, and applied 1.5x multiplier to reach 37.5% final credit under 60% cap."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Flawlessly arbitrated Clause 4.3 exclusion for Event B, derived 480 min downtime, 98.889% uptime with full LaTeX arithmetic, selected 25% tier, and applied 1.5x multiplier to arrive at 37.5% credit."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [],
+      "winner": "Tie",
+      "justification": "Both models demonstrated 100% mathematical and contractual precision, properly excluding emergency zero-day patching under Clause 4.3 and computing the exact 37.5% SLA credit."
+    },
+    {
+      "prompt_id": "LOGIC-02",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Mid-Cycle Subscription Downgrade with Overage Offset",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Calculated exact prorated credit of $1,000.00 for 15 dropped seats over 20 remaining days, computed 3-tier overages of $800.00, and determined net account balance credit of $200.00."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Derived exact $1,000.00 prorated seat credit via step-by-step arithmetic, evaluated tiered overage brackets to $800.00, and netted out $200.00 credit balance."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [],
+      "winner": "Tie",
+      "justification": "Both models arrived at the exact dollar and cent figures ($1,000 credit, $800 overage, $200 net balance) with explicit arithmetic breakdowns."
+    },
+    {
+      "prompt_id": "LOGIC-03",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Conflicting Multi-Role RBAC Authorization Decision",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Correctly evaluated environmental ABAC VPN override, applied Explicit Deny supremacy over Database_Operator ALLOW, and denied access because request had only 1 of 2 required Senior Security Officer approvals."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Structured 4-step policy evaluation resolving ABAC VPN exception, identifying RBAC collision, verifying dual-condition breakglass exception, and issuing definitive DENY due to missing second approval."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [],
+      "winner": "Tie",
+      "justification": "Both models reached the definitive DENY decision through rigorous hierarchical evaluation, correctly verifying that the corporate VPN waived the ABAC rule but the breakglass exception failed due to having only 1 of 2 required approvals."
+    },
+    {
+      "prompt_id": "LOGIC-04",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "GDPR Right-to-Erasure vs. AML Regulatory Retention Conflict",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 4,
+          "justification": "Successfully harmonized GDPR Art 17(3)(b) with AMLD5 Art 40, explicitly separating data into immediate purge vs restricted cold storage categories, defining the 5-year retention clock, and providing a 5-step operational compliance roadmap."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "FAIL",
+          "adherence_pct": 50
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 2,
+          "justification": "Demonstrated flawed logic with internal chronological date contradictions (assumed October 2023 date prior to the December 2023 transaction), and suffered catastrophic truncation at token 750, completely failing to provide the requested data categories for immediate erasure vs cold storage."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [
+        "ERR_INCOMPLETE_ARBITRATION"
+      ],
+      "winner": "Model A",
+      "justification": "Model A provided an exhaustive compliance plan with specific data categorization and execution steps. Model B suffered from date confusion and hit its 750-token output limit mid-sentence, completely omitting the required categories of data to erase vs retain (ERR_INCOMPLETE_ARBITRATION)."
     }
   ]
 }

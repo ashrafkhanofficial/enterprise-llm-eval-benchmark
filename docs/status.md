@@ -13,13 +13,13 @@ Phase 1 ████████████████████ 100%  Envir
 Phase 2 ████████████████████ 100%  Rubric & Test Suite Design
 Phase 3 ████████████████████ 100%  Automated Inference Pipeline
 Phase 4 ████████████████████ 100%  Programmatic Schema Validation
-Phase 5 ██████████░░░░░░░░░░  53%  Human Expert Evaluation (16/30 Prompts)
+Phase 5 █████████████░░░░░░░  67%  Human Expert Evaluation (20/30 Prompts)
 Phase 6 ░░░░░░░░░░░░░░░░░░░░   0%  Statistical Audit & Analysis
 Phase 7 ░░░░░░░░░░░░░░░░░░░░   0%  Executive Report & README
 ```
 
 **Phases Completed**: 4 / 7  
-**Active Phase**: Phase 5 — Human Expert Evaluation (Batch 5.3: Logic Prompts Next)
+**Active Phase**: Phase 5 — Human Expert Evaluation (Batch 5.3 Part 2: `LOGIC-05`–`08` Next)
 
 ---
 
@@ -80,21 +80,21 @@ Phase 7 ░░░░░░░░░░░░░░░░░░░░   0%  Execu
 
 ---
 
-## Phase 5: Human Expert Evaluation 🟡 IN PROGRESS (16 / 30 Completed)
+## Phase 5: Human Expert Evaluation 🟡 IN PROGRESS (20 / 30 Completed)
 
 | # | Task | Status | Date | Notes |
 |---|------|--------|------|-------|
 | 5.1 | Evaluate SCHEMA-01 through SCHEMA-08 | ✅ Done | 2026-10-29 | 8/8 complete; Model A: 1 win (`SCHEMA-03`), Model B: 0 wins, 7 ties |
 | 5.2 | Evaluate FACT-01 through FACT-08 | ✅ Done | 2026-10-29 | 8/8 complete; Model A: 0 wins, Model B: 1 win (`FACT-03`), 7 ties |
-| 5.3 | Evaluate LOGIC-01 through LOGIC-08 | 🔲 Pending | — | 0/8 complete (Resume point for next session: Part 1 `LOGIC-01`..`04`) |
+| 5.3 | Evaluate LOGIC-01 through LOGIC-08 | 🟡 In Progress | 2026-10-29 | 4/8 complete (`LOGIC-01`–`04` done: Model A 1 win on `LOGIC-04`, 3 ties; Part 2 pending) |
 | 5.4 | Evaluate SEC-01 through SEC-06 | 🔲 Pending | — | 0/6 complete |
-| 5.5 | Compile `data/evaluation_results.json` | 🟡 In Progress | 2026-10-29 | 16/30 records saved and verified |
+| 5.5 | Compile `data/evaluation_results.json` | 🟡 In Progress | 2026-10-29 | 20/30 records saved and verified |
 | 5.6 | Quality review: justification audit | 🔲 Pending | — | Final consistency check |
 
 **Head-to-Head Tally to Date**:
-- **Model A (`gemini-3.1-flash-lite`)**: 1 win (`SCHEMA-03`)
+- **Model A (`gemini-3.1-flash-lite`)**: 2 wins (`SCHEMA-03`, `LOGIC-04`)
 - **Model B (`qwen/qwen3.8-27b`)**: 1 win (`FACT-03`)
-- **Ties**: 14
+- **Ties**: 17
 
 ---
 
@@ -138,6 +138,7 @@ Phase 7 ░░░░░░░░░░░░░░░░░░░░   0%  Execu
 | 2026-10-28 | Model Selection & Free-Tier Optimization | Model A: Google AI Studio (`gemini-3.1-flash-lite`); Model B: Groq Cloud (`qwen/qwen3.8-27b`). Handled Groq 1000 OTPM rate limit via 750 max_tokens cap and 15s pacing |
 | 2026-10-29 | Human Evaluation Mode (Option A) & Full Verbatim Transparency Protocol | Evaluator agents must display exact unedited model responses in chat. No compressed ellipses (`...`) to prevent masking architectural details or truncation points |
 | 2026-10-29 | Factuality Truncation Arbitration (`FACT-07` & `FACT-08`) | Ruled as Ties: Model B's token truncation occurred on secondary/optional advice after primary false premises were already fully refuted; preserves core factuality evaluation |
+| 2026-10-29 | Batch 5.3 Part 1 Logic Arbitration (`LOGIC-01` to `LOGIC-04`) | Approved by user: 3 Ties (`LOGIC-01`, `02`, `03`), Model A wins `LOGIC-04` due to Model B token limit exhaustion and chronological contradiction omitting required data categories (`ERR_INCOMPLETE_ARBITRATION`) |
 
 ---
 
