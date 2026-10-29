@@ -908,6 +908,192 @@
       ],
       "winner": "Model A",
       "justification": "Model A provided an exhaustive compliance plan with specific data categorization and execution steps. Model B suffered from date confusion and hit its 750-token output limit mid-sentence, completely omitting the required categories of data to erase vs retain (ERR_INCOMPLETE_ARBITRATION)."
+    },
+    {
+      "prompt_id": "LOGIC-05",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Deterministic Token Bucket Rate Limiter Simulation",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 4,
+          "justification": "Arrived at correct final balances in secondary summary table, but output contains self-contradictory initial table (marking Req C rejected and cascading wrong balances) before self-correcting in scratchpad notes."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Delivered an immaculate, first-pass deterministic trace showing exact time delta, continuous tokens added, comparison inequalities, HTTP 429 status code, and final summary table matching ground truth 100%."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [],
+      "winner": "Model B",
+      "justification": "Model B delivered a pristine, error-free trace on the first pass with explicit LaTeX inequality checks and clean summary table. Model A emitted a contradictory preliminary table with erroneous balances before catching its mistake and providing a corrected table."
+    },
+    {
+      "prompt_id": "LOGIC-06",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Raft Consensus Cluster Partition Resolution",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Flawlessly answered all 3 prompt questions: verified 2/5 < 3 quorum on Alpha prevents commit, proved Beta achieves 3/5 majority for Term 4 leader election, and traced post-partition reconciliation where N1 steps down and discards uncommitted log entry."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "FAIL",
+          "adherence_pct": 60
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 2,
+          "justification": "Answered Question 1 correctly, but truncated at token 750 mid-sentence during Question 2 election vote tally, completely failing to address Question 3 regarding post-heal log reconciliation and uncommitted log entry fate."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [
+        "ERR_INCOMPLETE_ARBITRATION"
+      ],
+      "winner": "Model A",
+      "justification": "Model A completed an exhaustive, rigorous distributed systems audit covering all three partition lifecycle stages. Model B suffered token exhaustion and truncated mid-sentence, completely omitting Question 3 and violating negative constraints (ERR_INCOMPLETE_ARBITRATION)."
+    },
+    {
+      "prompt_id": "LOGIC-07",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Grandfathered Tier Contract Migration Precedence",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 2,
+          "justification": "Committed an inverted contractual hierarchy error by ruling in favor of $20/mo grandfathered pricing; improperly held that an informal sales email overrides an express merger/integration clause (Section 14.1) via promissory estoppel."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 95
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Correctly determined the legally binding rate is $35/user/mo with metered storage; rigorously analyzed Section 14.1 integration clause precedence, failure of the 2022 agreement to waive Section 14.1, and the legal inability of informal sales emails to amend an executed MSA."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [
+        "ERR_HIERARCHY_INVERSION"
+      ],
+      "model_b_failure_codes": [],
+      "winner": "Model B",
+      "justification": "Model B correctly identified the governing contract hierarchy, enforcing Section 14.1 merger clause and arriving at the legally binding $35 rate. Model A inverted contractual hierarchy (ERR_HIERARCHY_INVERSION) by asserting an informal sales email overrides an executed MSA."
+    },
+    {
+      "prompt_id": "LOGIC-08",
+      "category": "complex_multistep_logic_and_policy",
+      "title": "Disaster Recovery RPO/RTO Violation Penalty Assessment",
+      "model_a_scores": {
+        "instruction_adherence": {
+          "verdict": "PASS",
+          "adherence_pct": 100
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 5,
+          "justification": "Flawlessly calculated 105 min excess RTO (3 full blocks = $3,000), 25 min excess RPO ($5,000 + $12,500 = $17,500), $20,500 gross penalty, and applied $25,000 MRR cap to confirm final payable penalty of $20,500."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_b_scores": {
+        "instruction_adherence": {
+          "verdict": "FAIL",
+          "adherence_pct": 75
+        },
+        "factuality": {
+          "score": null,
+          "justification": "N/A for logic prompts"
+        },
+        "reasoning": {
+          "score": 3,
+          "justification": "Derived Steps 1 through 3 ($3,000, $17,500, $20,500) accurately, but truncated at token 750 right after typing 'MRR: $' in Step 4, failing to state the final capped payable penalty."
+        },
+        "safety": {
+          "verdict": null,
+          "justification": "N/A for non-safety prompts"
+        }
+      },
+      "model_a_failure_codes": [],
+      "model_b_failure_codes": [
+        "ERR_INCOMPLETE_ARBITRATION"
+      ],
+      "winner": "Model A",
+      "justification": "Model A completed the entire 4-step penalty assessment and cap reconciliation with exact dollar figures and summary table. Model B truncated at token 750 before completing the Step 4 cap comparison (ERR_INCOMPLETE_ARBITRATION)."
     }
   ]
 }
