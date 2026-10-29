@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "validation_type": "programmatic_layer_a",
+    "total_schema_prompts": 8,
+    "model_a_pass_rate": 1.0,
+    "model_b_pass_rate": 0.875
+  },
+  "results": [
+    {
+      "prompt_id": "SCHEMA-01",
+      "title": "Strict Raw JSON Incident Ticket Extraction",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "All strict schema assertions passed."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "All strict schema assertions passed."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-02",
+      "title": "Customer Rejection Letter with Banned Words",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "banned_tokens_found": [],
+        "details": [
+          "Zero banned tokens detected."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "banned_tokens_found": [],
+        "details": [
+          "Zero banned tokens detected."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-03",
+      "title": "Nested Telemetry Alert Configuration Payload",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "All nested schema assertions passed."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": false,
+        "error_codes": [
+          "ERR_PREAMBLE_LEAK"
+        ],
+        "details": [
+          "Detected markdown code fences (```)."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-04",
+      "title": "Strict Word-Count Clamped Executive Summary",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "word_count": 32,
+        "details": [
+          "Word count exactly compliant: 32 words."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "word_count": 31,
+        "details": [
+          "Word count exactly compliant: 31 words."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-05",
+      "title": "Raw TSV Export with Zero Markdown Formatting",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "line_count": 4,
+        "details": [
+          "Valid raw TSV format without markdown table decorators."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "line_count": 4,
+        "details": [
+          "Valid raw TSV format without markdown table decorators."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-06",
+      "title": "Structured Enum Array Classification",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "JSON array and all enum constraints passed."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "JSON array and all enum constraints passed."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-07",
+      "title": "Read-Only Postgres Query with Negative Syntax Restrictions",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "All negative SQL syntax constraints satisfied."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "All negative SQL syntax constraints satisfied."
+        ]
+      }
+    },
+    {
+      "prompt_id": "SCHEMA-08",
+      "title": "Multi-Key Localization Payload",
+      "model_a_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "Localization schema and all language keys valid."
+        ]
+      },
+      "model_b_programmatic": {
+        "overall_pass": true,
+        "error_codes": [],
+        "details": [
+          "Localization schema and all language keys valid."
+        ]
+      }
+    }
+  ]
+}
